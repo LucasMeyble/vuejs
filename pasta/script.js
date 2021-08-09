@@ -39,3 +39,17 @@ var app5 = new Vue({
         somaResult: 0
     }
 })
+
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        nome: 'lucas',
+        idade: 21
+    },
+    methods: {
+        mostrar: (nome, idade) => {
+            const txt = `olá meu nom é ${nome} e eu tenho ${idade} anos`;
+            return txt;
+        }
+    }
+})
