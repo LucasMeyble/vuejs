@@ -37,6 +37,35 @@
 		</footer>
 	</div>
 
+	<hr />
+
+	<div id="app-2">
+		<header class="header">
+
+		</header>
+		<section class="container">
+			<section class="container__content">
+
+				<div v-if="aviso">Este é um aviso</div>
+				<div v-bind:id="div_id">Olhe o id da div</div>
+				<div v-bind:id="'item-'+id">Olhe o id da div</div>
+				<a v-bind:href="link">Acessar</a> <br/>
+				<button v-on:click="clicou">clica em min 😥</button> </br>
+				<!-- ele envia faz a ação de alert mesmo antes de enviar o formulario -->
+				<form v-on:submit.prevent="enviou">
+					<input type="text" />
+					<input type="submit" value="Enviar" />
+				</form>
+			</section>
+			<aside class="container__sidebar">
+
+			</aside>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
