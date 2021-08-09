@@ -31,6 +31,8 @@
 
     <hr />
 
+    
+
     <div id="app-4">
         <span>{{ n1 }} + </span>
         <input type="text" v-model="n2" /> = 
@@ -51,6 +53,27 @@
 
     <div id="app-6" >
         <div>{{mostrar(nome, idade)}}</div>
+    </div>
+
+    <hr />
+
+    <div id="app-7">
+        <div>
+            <p v-html="(
+                pais == 'argentina' ? argentina :
+                pais == 'brazil' ? brazil :
+                pais == 'china' ? china :
+                pais == 'uk' ? uk :
+                pais == 'usa' ? usa : ''
+            )"></p>
+            <p v-html="(
+                pais == 'argentina' ? 'America do Sul' :
+                pais == 'brazil' ? 'America do Sul' :
+                pais == 'china' ? 'Asia' :
+                pais == 'uk' ? 'Europa' :
+                pais == 'usa' ? 'America do Norte' : ''
+            )"></p>
+        </div>
     </div>
 
     <script src="./script.js"></script>

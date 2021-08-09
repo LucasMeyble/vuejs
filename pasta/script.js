@@ -53,3 +53,21 @@ var app6 = new Vue({
         }
     }
 })
+
+function bandeira(pais) {
+    return '<img src="paises/'+pais+'.png" />'
+}
+
+var app7 = new Vue({
+    el: '#app-7',
+    data:{
+        pais: '',
+        argentina: bandeira('argentina'),
+        brazil: bandeira('brazil'),
+        china: bandeira('china'),
+        uk: bandeira('uk'),
+        usa: bandeira('usa')
+    }
+})
+
+app7.pais = 'brazil';
