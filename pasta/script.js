@@ -22,3 +22,11 @@ var app3 = new Vue({
         ]
     }
 });
+
+var app4 = new Vue({
+    el:'#app-4',
+    data: {
+        n1: 10,
+        n2: 20
+    }
+})
