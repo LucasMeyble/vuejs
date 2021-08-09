@@ -70,4 +70,27 @@ var app7 = new Vue({
     }
 })
 
+var app8 = new Vue({
+    el: '#app-8',
+    data:{
+        pais: '',
+        argentina: bandeira('argentina'),
+        brazil: bandeira('brazil'),
+        china: bandeira('china'),
+        uk: bandeira('uk'),
+        usa: bandeira('usa')
+    },
+    methods: {
+        paises: function() {
+            return [
+                {bandeira:this.argentina, continente: 'America do sul'},
+                {bandeira:this.brazil, continente: 'America do sul'},
+                {bandeira: this.china, continente: 'Asia'},
+                {bandeira: this.uk, continente: 'Europa'},
+                {bandeira: this.usa, continente: 'America do norte'}
+            ];
+        }
+    }
+})
+
 app7.pais = 'brazil';
