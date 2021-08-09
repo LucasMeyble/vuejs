@@ -83,14 +83,31 @@ var app8 = new Vue({
     methods: {
         paises: function() {
             return [
-                {bandeira:this.argentina, continente: 'America do sul'},
-                {bandeira:this.brazil, continente: 'America do sul'},
+                {bandeira: this.argentina, continente: 'America do sul'},
+                {bandeira: this.brazil, continente: 'America do sul'},
                 {bandeira: this.china, continente: 'Asia'},
                 {bandeira: this.uk, continente: 'Europa'},
                 {bandeira: this.usa, continente: 'America do norte'}
             ];
         }
     }
+})
+
+Vue.component("pais", {
+    props:['nome'],
+    template:`<p v-html="nome"></p>`
+})
+
+var app9 = new Vue({
+    el: '#app-9',
+    data:{
+        pais: '',
+        argentina: bandeira('argentina'),
+        brazil: bandeira('brazil'),
+        china: bandeira('china'),
+        uk: bandeira('uk'),
+        usa: bandeira('usa')
+    },
 })
 
 app7.pais = 'brazil';
