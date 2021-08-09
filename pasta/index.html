@@ -13,9 +13,13 @@
         <span>Pare o mouse sobre min</span>
     </div>
 
+    <hr />
+
     <div id="app-2" v-if="seen">
         <span>agora vc me vê</span>
     </div>
+
+    <hr />
 
     <div id="app-3">
         <ol>
@@ -25,10 +29,22 @@
         </ol>
     </div>
 
+    <hr />
+
     <div id="app-4">
-        <span>{{ n1 }}</span>
-        <input type="text" v-model="n2" />
+        <span>{{ n1 }} + </span>
+        <input type="text" v-model="n2" /> = 
         <span>{{ n1 + parseInt(n2) }}</span>
+    </div>
+
+    <hr />
+
+    <div id="app-5">
+        <span>{{ n1 }} + {{ n2 }}</span> =
+        <input type="text" v-model="somaResult"/>
+
+        <div v-if="(n1 + n2 == somaResult) && (somaResult != 0)">ACERTOU!!</div>
+        <div v-if="(n1 + n2 != somaResult) && (somaResult != 0)">ERROU!!</div>
     </div>
 
     <script src="./script.js"></script>

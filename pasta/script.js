@@ -30,3 +30,12 @@ var app4 = new Vue({
         n2: 20
     }
 })
+
+var app5 = new Vue({
+    el: '#app-5',
+    data: {
+        n1: Math.floor(Math.random()*30),
+        n2: Math.floor(Math.random()*30),
+        somaResult: 0
+    }
+})
