@@ -2,7 +2,7 @@ body {
 	font-family: Arial;
 	font-size:14px;
 }
-#app {
+#view {
 	max-width:1024px;
 	margin:auto;
 }

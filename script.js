@@ -9,3 +9,22 @@ var app = new Vue({
         }
     }
 })
+
+var app2 = new Vue({
+    el: '#app-2',
+    data: {
+        numero: 5
+    },
+    computed: {
+        aleatorio: function(){
+            let al = Math.floor(Math.random()*100);
+            return this.numero+" + "+al+" = "+(this.numero+al);
+        }
+    },
+    methods: {
+        aleatorioFuncao: function(){
+            let al = Math.floor(Math.random()*100);
+            return this.numero+" + "+al+" = "+(this.numero+al);
+        }
+    }
+})
