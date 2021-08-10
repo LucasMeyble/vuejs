@@ -12,6 +12,11 @@ body {
 	margin:auto;
 }
 
+#app-3 {
+	max-width:1024px;
+	margin:auto;
+}
+
 .header {
 	min-height:100px;
 	background-color:#EEE;
