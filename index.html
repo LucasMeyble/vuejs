@@ -8,47 +8,32 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+
 	<div id="app">
-		<header class="header">
-		</header>
-		<section class="container">
-			<section class="container__content">
-                <div id="app">
-                    {{nome}} <br />
-                    {{nomeInvertido}}
-                </div>
-			</section>
-			<aside class="container__sidebar">
-			</aside>
-		</section>
-		<footer class="footer">
-			<span></span>
-		</footer>
+		{{nome}} <br />
+		{{nomeInvertido}}
 	</div>
 
 	<hr />
 
 	<div id="app-2">
-		<header class="header">
-		</header>
-		<section class="container">
-			<section class="container__content">
-                computed
-                <div>{{aleatorio}}</div>
-                <div>{{aleatorio}}</div>
-			</section>
-			<aside class="container__sidebar">
-                function <br/>
-                <div>{{ aleatorioFuncao() }}</div>
-                <div>{{ aleatorioFuncao() }}</div>
-			</aside>
-		</section>
-		<footer class="footer">
+		computed
+		<div>{{aleatorio}}</div>
+		<div>{{aleatorio}}</div>
 
-		</footer>
+		function <br/>
+		<div>{{ aleatorioFuncao() }}</div>
+		<div>{{ aleatorioFuncao() }}</div>
 	</div>
 
 	<hr />
+
+	<div id="app-3">
+		<input type="text" v-model="conta">
+		<span>{{ aviso }}</span>	
+		{{ resultado }}	
+	</div>
+
 
 	<script src="script.js"></script>
 </body>
