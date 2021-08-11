@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="header">
+			</br>
+			<small v-html="subtitle"></small>
+
+		</header>
+		<section class="container">
+			<section class="container__content">
+                <form>
+                    Digite um nome:
+                    <input type="text" v-model="nameInput">
+					<span>{{aviso}}</span>
+                </form>
+
+                <button v-if="buttonVisible" @click="add">adcionar</button>
+
+			</section>
+			<aside class="container__sidebar">
+                <div>
+                    <ul>
+                        <li v-for="item in lista">{{item}}</li>
+                    </ul>
+                    {{totalTexto}}
+                </div>
+			</aside>
+		</section>
+		<footer class="footer">
+
+			<span v-html="copyRight"></span>
+
+		</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
