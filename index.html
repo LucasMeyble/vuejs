@@ -17,13 +17,17 @@
 	<hr />
 
 	<div id="app-2">
-		computed
-		<div>{{aleatorio}}</div>
-		<div>{{aleatorio}}</div>
-
-		function <br/>
-		<div>{{ aleatorioFuncao() }}</div>
-		<div>{{ aleatorioFuncao() }}</div>
+		<div>
+			computed
+			<div>{{aleatorio}}</div>
+			<div>{{aleatorio}}</div>
+		</div>
+		<hr>
+		<div>
+			function
+			<div>{{ aleatorioFuncao() }}</div>
+			<div>{{ aleatorioFuncao() }}</div>
+		</div>
 	</div>
 
 	<hr />
@@ -34,6 +38,18 @@
 		{{ resultado }}	
 	</div>
 
+	<hr />
+
+	<div id="app-4">
+		primeiro nome
+		<input type="text" v-model="primeiroNome">
+		<br />
+		segundo nome
+		<input type="text" v-model="segundoNome">
+		<br />
+		nome completo
+		<input type="text" v-model="nomeCompleto">
+	</div>
 
 	<script src="script.js"></script>
 </body>

@@ -56,3 +56,23 @@ var app3 = new Vue({
         }
     }
 })
+
+var app4 = new Vue({
+    el: '#app-4',
+    data: {
+        primeiroNome: '',
+        segundoNome: ''
+    },
+    computed: {
+        nomeCompleto: {
+            get: function() {
+                return this.primeiroNome+' '+this.segundoNome
+            },
+            set: function(novoValor) {
+                let nomes = novoValor.split(' ');
+                this.primeiroNome = nomes[0];
+                this.segundoNome = nomes[1]
+            }
+        }
+    }
+})
