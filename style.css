@@ -8,3 +8,21 @@ body {
 	flex-direction: row;
 	padding-right: 1700px
 }
+
+.oculto{
+	display: none;
+}
+
+.active{
+	display: block;
+}
+
+.sucess{
+	background-color: #0000FF;
+	color: white;
+}
+
+.error{
+	background-color: #FF0000;
+	color: white;
+}

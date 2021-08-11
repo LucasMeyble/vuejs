@@ -76,3 +76,29 @@ var app4 = new Vue({
         }
     }
 })
+
+var app5 = new Vue({
+    el: '#app-5',
+    data: {
+        errorMsg: '',
+        msgDivClass: { 
+            active: false, 
+            sucess: false,
+            error: false 
+        }
+    },
+    methods: {
+        showSucess: function(msg){
+            this.msgDivClass.active = true;
+            this.msgDivClass.sucess = true;
+            this.msgDivClass.error = false;
+            this.errorMsg = msg
+        },
+        showError: function(msg){
+            this.msgDivClass.active = true;
+            this.msgDivClass.sucess = false;
+            this.msgDivClass.error = true;
+            this.errorMsg = msg
+        }
+    }
+})
