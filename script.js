@@ -181,3 +181,15 @@ var app9 = new Vue({
         }
     }
 })
+
+var app10 = new Vue({
+    el: '#app-10',
+    data: {
+        lista: [
+            'lucas',
+            'matheus',
+            'caio',
+            'icaro'
+        ]
+    }
+})
