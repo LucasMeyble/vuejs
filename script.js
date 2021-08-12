@@ -145,3 +145,20 @@ var app6 = new Vue({
         }
     }
 })
+
+var app7 = new Vue({
+    el: '#app-7',
+    data: {
+        aviso: 'Esse aqui é um aviso',
+        avisoBase: {
+            border: '2px solid #000',
+            fontSize: '20px',
+            padding: '10px'
+        },
+        avisoError: {
+            backgroundColor: '#FF0000',
+            color: '#FFF',
+            fontSize: '30px'
+        }
+    }
+})
