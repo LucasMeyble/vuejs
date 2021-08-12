@@ -75,6 +75,19 @@
 		</div>
 	</div>
 
+	<hr />
+
+	<div id="app-8">
+		<template v-if="ganhou">
+			<h1>Voce ganhou</h1>
+			<small>parabens!!</small>
+		</template>
+		<template v-else>
+			<h1>Voce perdeu</h1>
+			<small>desculpa!!</small>
+		</template>
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
