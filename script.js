@@ -102,3 +102,46 @@ var app5 = new Vue({
         }
     }
 })
+
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        errorMsg: '',
+        errorType: ''
+    },
+    computed: {
+        msgDivClass: function (){
+            let r = {
+                active: false,
+                sucess: false,
+                error: false
+            } 
+
+            if(this.errorMsg != ''){
+                r.active = true;
+            }
+
+            switch(this.errorType) {
+                case 'sucess': 
+                    r.sucess = true;
+                    r.error = false;
+                    break;
+                case 'error':
+                    r.sucess = false;
+                    r.error = true;
+                    break;
+            }
+            return r;
+        }
+    },
+    methods: {
+        showSucess: function(msg){
+            this.errorMsg = msg;
+            this.errorType = 'sucess';
+        },
+        showError: function(msg){
+            this.errorMsg = msg;
+            this.errorType = 'error';
+        }
+    }
+})
