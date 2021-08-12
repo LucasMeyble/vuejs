@@ -169,3 +169,15 @@ var app8 = new Vue({
         ganhou: true
     }
 })
+
+var app9 = new Vue({
+    el: '#app-9',
+    data: {
+        object: {
+            nome: 'lucas',
+            idade: 21,
+            tamanho: 1.90,
+            profissao: 'programador'
+        }
+    }
+})
