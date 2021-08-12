@@ -99,10 +99,21 @@
 	<hr />
 
 	<div id="app-10">
-		<div>coloque no console - Vue.set(app.lista, 5, 'paulo de tal);</div>
+		<div>coloque no console - Vue.set(app10.lista, 3, 'paulo de tal');</div>
 		<ul>
 			<li v-for="item in lista">
 				{{item}}
+			</li>
+		</ul>
+	</div>
+
+	<hr />
+
+	<div id="app-11">
+		<div>coloque no console - Vue.set(app11.object, 'pai', 'paulo de tal');</div>
+		<ul>
+			<li v-for="(item, key) in object">
+				{{ key+': '+ item }}
 			</li>
 		</ul>
 	</div>
