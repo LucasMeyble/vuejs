@@ -231,3 +231,16 @@ var app12 = new Vue({
         }
     }
 })
+
+var app13 = new Vue({
+    el: '#app-13',
+    data: {
+        conta: 0
+    },
+    methods: {
+        submit: function(){
+            this.conta++;
+        }
+    }
+    
+})

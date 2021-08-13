@@ -129,6 +129,19 @@
 			</li>
 		</ul>
 	</div>
+	
+	<hr />
+
+	<div id="app-13">
+		<p>mesmo escrevendo algo, por causa do prevent ele nao envia o formulario, ele so executa a function</p>
+		<form v-on:submit.prevent="submit">
+			<input type="text">
+
+			<input type="submit" value="clique para enviar">
+		</form>
+
+		contagem {{conta}}
+	</div>
 
 	<script src="script.js"></script>
 </body>
