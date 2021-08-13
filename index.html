@@ -143,6 +143,16 @@
 		contagem {{conta}}
 	</div>
 
+	<hr />
+
+	<div id="app-14">
+		<p>estou restringindo o click so na area ao inves do botão</p>
+		<div class="area" v-on:click.once.self="clica">
+			<button>clica em min</button>
+		</div>
+		contagem: {{conta}}
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>

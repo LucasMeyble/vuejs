@@ -26,3 +26,9 @@ body {
 	background-color: #FF0000;
 	color: white;
 }
+
+.area{
+	width: 200px;
+	height: 200px;
+	background-color: aquamarine;
+}
