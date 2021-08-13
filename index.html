@@ -162,6 +162,24 @@
 		<p>contagem: {{conta}}</p>
 	</div>
 
+	<hr />
+
+	<div id="app-16">
+		<p>ele so conta se apertar com o shift</p>
+		<!-- pode ser ctrl ou qualquer coutrra tecla de bind -->
+		<input type="submit" v-on:click.shift="clica"/>
+
+		<p>contagem: {{conta}}</p>
+	</div>	
+	
+	<hr />
+	
+	<div id="app-17">
+		<button v-on:click.right.prevent="clica">aqui</button>
+
+		<p>contagem: {{conta}}</p>
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
