@@ -295,3 +295,10 @@ var app17 = new Vue({
     }
     
 })
+
+var app18 = new Vue({
+    el: '#app-18',
+    data: {
+        nomes: []
+    }
+})
