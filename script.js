@@ -257,3 +257,16 @@ var app14 = new Vue({
     }
     
 })
+
+var app15 = new Vue({
+    el: '#app-15',
+    data: {
+        conta: 0
+    },
+    methods: {
+        clica: function(){
+            this.conta++;
+        }
+    }
+    
+})
