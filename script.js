@@ -322,3 +322,14 @@ var app19 = new Vue({
         ]
     }
 })
+
+
+var app20 = new Vue({
+    el: '#app-20',
+    data: {
+        idade: '',
+        nome: ''
+    }
+
+    
+})

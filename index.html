@@ -216,6 +216,15 @@
 		<p>Selecionado: {{opcao.idade}}</p>
 	</div>
 
+	<hr />
+
+	<div id="app-20">
+		<input type="number" v-model.number="idade" />
+
+		<p>eu tiro os espaços antes e depois da primeira e ultima palavra respectivamente</p>
+		<input type="text" v-model.trim="nome" />
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
