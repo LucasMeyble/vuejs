@@ -9,7 +9,28 @@ Vue.component('menu-superior', {
 
 var app = new Vue({
     el: '#app',
-    data: {
+    data: {}
+})
 
-    }
+Vue.component('contador', {
+    data: function(){
+        return {
+            c: 0
+        };
+    },
+    methods: {
+        aumentar: function(){
+            this.c++;
+        }
+    },
+    template: 
+    `<div>
+        <span>{{c}}</span>
+        <button v-on:click="aumentar">Aumentar</button>
+    </div>`
+})
+
+var app1 = new Vue({
+    el: '#app-1',
+    data: {}
 })
