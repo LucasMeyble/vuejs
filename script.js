@@ -309,3 +309,16 @@ var app18 = new Vue({
         ]
     }
 })
+
+var app19 = new Vue({
+    el: '#app-19',
+    data: {
+        marcador: '',
+        opcao: '',
+        itens: [
+            {nome: 'Lucas', idade: '10'},
+            {nome: 'Joao', idade: '20'},
+            {nome: 'Pedro', idade: '30'},
+        ]
+    }
+})

@@ -202,6 +202,20 @@
 		<p>Letra: {{opcao}}</p>
 	</div>
 
+	<hr />
+
+	<div id="app-19">
+		<input type="checkbox" v-model="marcador" true-value="sim" false-value="não">
+
+		<p>Marcador: {{marcador}}</p>
+
+		<select v-model="opcao">
+			<option v-for="item in itens" v-bind:value="item">{{item.nome}}</option>
+		</select>
+
+		<p>Selecionado: {{opcao.idade}}</p>
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
