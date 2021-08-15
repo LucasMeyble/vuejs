@@ -299,6 +299,13 @@ var app17 = new Vue({
 var app18 = new Vue({
     el: '#app-18',
     data: {
-        nomes: []
+        nomes: [],
+        grupo: '',
+        opcao: '',
+        opcoes: [
+            {nome: 'Lucas', letra: 'L'},
+            {nome: 'Pedro', letra: 'P'},
+            {nome: 'João', letra: 'J'},
+        ]
     }
 })
