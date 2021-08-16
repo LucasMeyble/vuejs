@@ -79,6 +79,7 @@ var sidebar = new Vue({
 })
 
 // ---------------------------------------------------------------------------------
+
 var postagem = {
     props: ['titulo', 'corpo'],
     data: function(){
@@ -99,6 +100,27 @@ var conteudo = new Vue({
     }
 })
 
+// ---------------------------------------------------------------------------------
 
+Vue.component('aviso', {
+    template: `<div class="aviso"><slot></slot></div>`
+});
+
+var postagem = {
+    template: `
+        <div>
+            <h2><slot name="titulo"></slot></h2>
+            <p><slot name="corpo"></slot></p>
+        </div>
+    `
+};
+
+var conteudo2 = new Vue({
+    el: '#conteudo2',
+    data: {},
+    components: {
+        postagem: postagem
+    }
+})
 
 
