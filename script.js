@@ -78,7 +78,26 @@ var sidebar = new Vue({
     }
 })
 
+// ---------------------------------------------------------------------------------
+var postagem = {
+    props: ['titulo', 'corpo'],
+    data: function(){
+        return{
+            exemplo: 'algum'
+        }
+    },
+    template: '<div><h2>{{titulo}}</h2><p>{{corpo}}</p><span>{{exemplo}}</span></div>'
+}
 
+var conteudo = new Vue({
+    el: '#conteudo',
+    data: {
+
+    },
+    components: {
+        postagem: postagem
+    }
+})
 
 
 
