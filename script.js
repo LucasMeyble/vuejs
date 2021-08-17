@@ -126,7 +126,7 @@ var conteudo2 = new Vue({
 // ---------------------------------------------------------------------------------
 
 var postagem = {
-    props: ['titulo'],
+    props: ['titulo', 'corpo'],
     methods: {
         responder: function(){
             this.$emit('responder', this.titulo)
@@ -135,7 +135,7 @@ var postagem = {
     template: `
         <div>
             <h2>{{titulo}}</h2>
-            <p><slot></solot></p>
+            <p>{{corpo}}</p>
             <button v-on:click="responder">Responder</button>
         </div>
     `
@@ -154,7 +154,63 @@ var conteudo3 = new Vue({
         }
     },
     components: {
-        postagem: postagem
+        postagem
     }
 })
+
+// ---------------------------------------------------------------------------------
+
+Vue.component('todo-adcionar', {
+    data: function(){
+        return{
+            txt: ''
+        }
+    },
+    methods: {
+        add: function(){
+            this.$emit('add', this.txt)
+        }
+    },
+    template: `
+    <div>
+        <input type="text" v-model="txt" />
+        <button v-on:click="add">Adcionar</button>
+    </div>
+    `
+});
+
+var header2 = new Vue({
+    el: '#header2',
+    methods: {
+        addTodoItem: function(txt){
+            sidebar1.addItem(txt)
+        }
+    }
+    
+});
+
+
+var lista = {
+    props: ['itens'],
+    template: `
+        <ul>
+            <li v-for="item in itens">{{item}}</li>
+        </ul>
+    `
+}
+
+var sidebar1 = new Vue({
+    el: '#sidebar1',
+    data: {
+        itens: ['item1', 'item2', 'item3']
+    },
+    methods: {
+        addItem: function(txt){
+            this.itens.push(txt);
+        }
+    },
+    components: {
+        lista
+    }
+}) 
 
