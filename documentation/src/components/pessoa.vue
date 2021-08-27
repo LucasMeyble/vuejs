@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <h2>esta é a descrição de pessoa {{nome}}</h2>
+        <info />
+        <Form />
+    </div>
+</template>
+
+<script>
+import info from './info.vue';
+import Form from './form42.vue';
+export default {
+    name: 'pessoa',
+    components: {info, Form},
+    data() {
+        return {
+            nome: 'Lucas'
+        }
+    }
+}
+</script>
