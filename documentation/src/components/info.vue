@@ -10,7 +10,7 @@
         </ul>
         <p v-show="mostrarEmail">mande uma mensagem para: {{email}}</p>
         <!-- o dois pontos é equivalente a v-bind: -->
-        <p>Para acessar meu portifolio <a :href="meu_link" target="_blank">basta clicar aqui</a></p>
+        <p class="portifolio">Para acessar meu portifolio <a :href="meu_link" target="_blank">basta clicar aqui</a></p>
         <div>
             <button @click="showEmail">
                 {{textoBotao}}
