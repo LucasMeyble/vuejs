@@ -2,11 +2,15 @@
     <div>
         <p v-if="estaTrabalhando">estou trabalhando no momento.</p>
         <p v-else>nao estou trabalhando no momento.</p>
-        <p>Ultilizo as seguintes tecnologias</p>
+        <p>Ultilizo as seguintes tecnologias para back-end</p>
         <ul>
-            <li>JS</li>
-            <li>PHP</li>
-            <li>Pyton </li>
+            <li v-for="(tecnology, index) in backend" v-bind:key="index">{{tecnology}}</li>
+        </ul>
+        <p>Ultilizo as seguintes tecnologias para o frontend</p>
+        <ul>
+            <li v-for="tecnology in frontend" :key="tecnology.id">
+                {{tecnology.language}}
+            </li>
         </ul>
         <p v-show="mostrarEmail">mande uma mensagem para: {{email}}</p>
         <!-- o dois pontos é equivalente a v-bind: -->
@@ -33,7 +37,13 @@ export default {
             mostrarEmail: false,
             email: 'Lucasmeyble123@gmail.com',
             meu_link: 'https://google.com',
-            textoBotao: 'mostrar email'
+            textoBotao: 'mostrar email',
+            backend: ['JS', 'PHP', 'Python'],
+            frontend: [
+                {id: 1, language: 'html'},
+                {id: 2, language: 'CSS'},
+                {id: 3, language: 'JS'},
+            ]
         }
     }, 
     methods: {
