@@ -8,7 +8,7 @@
 
 <script>
 import info from './info.vue';
-import Form from './form42.vue';
+import Form from './Form.vue';
 export default {
     name: 'pessoa',
     components: {info, Form},
